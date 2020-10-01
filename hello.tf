@@ -1,6 +1,6 @@
 provider "aws" {
-  profile    = "default"
-   region     = "eu-west-1"
+  profile = "default"
+  region  = "eu-west-1"
 }
 
 terraform {
@@ -19,9 +19,9 @@ resource "aws_instance" "my_ec2" {
   key_name               = "Yemi5times"
   vpc_security_group_ids = [aws_security_group.demo_sg.id]
   tags = {
-    "Name" = "Yemi5times-${count.index + 1}"
+    "Name"      = "Yemi5times-${count.index + 1}"
     Provisioner = "Terraform"
-    Test = "yes_no"
+    Test        = "yes_no"
   }
 
 }
