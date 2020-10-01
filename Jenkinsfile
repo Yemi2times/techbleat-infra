@@ -8,8 +8,8 @@ pipeline {
             }
         
            steps {
-            sh 'terraform init'
-            sh 'terraform apply -auto-approve'
+             'terraform init'
+             'terraform apply -auto-approve'
             }
          }    
     }
