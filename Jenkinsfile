@@ -7,7 +7,7 @@ pipeline {
                 aws_secrete_Acess_key = credentials ('Secrete_Key')
             }
         
-           stage {
+           steps {
             sh 'terraform init'
             sh 'terraform apply -auto-approve'
             }
