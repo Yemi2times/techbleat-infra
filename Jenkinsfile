@@ -4,12 +4,13 @@ pipeline {
           stage ('apply') {
             environment {
                 aws_access_key_id = credentials ('Access_Key')
-                saws_secrete_Acess_key = credentials ('Secrete_Key')
+                aws_secrete_Acess_key = credentials ('Secrete_Key')
             }
-        }
+        
            stage {
             sh 'terraform init'
             sh 'terraform apply -auto-approve'
             }
+         }    
     }
 }
